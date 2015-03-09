@@ -31,6 +31,10 @@ val pop_front : 'a t -> 'a option
 
 val pop_back : 'a t -> 'a option
 
+val peek_front : 'a t -> 'a option
+
+val peek_back : 'a t -> 'a option
+
 (* do not use push_back or pop_back in the function argument *)
 val iter_left : ('a -> unit) -> 'a t -> unit
 

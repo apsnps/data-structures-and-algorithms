@@ -56,6 +56,14 @@ let pop_back (first,last) =
       end;
       last := node.prev;
       Some node.value
+
+let get_value = function
+  | None -> None
+  | Some node -> Some node.value  
+
+let peek_front (first,_) = get_value !first
+
+let peek_back (_,last) = get_value !last  
       
 let iter_left f (first,_) =
   let rec iter = function
